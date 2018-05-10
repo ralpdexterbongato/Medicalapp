@@ -27,7 +27,7 @@ class VisiteController extends Controller
 
     public function pdf_visite(){
     $X = Carbon::now()->format('Y-m-d');
-    $data = visite::wheredate('created_at' ,'LIKE', $X ." %" )->get();
+    $data = visite::wheredate('created_at' , $X ." %" )->get();
     $pdf = PDF::loadView('visite.pdf',compact('data','X'));
     return $pdf->download('invoice.pdf');
     return $data;
