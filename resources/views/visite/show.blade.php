@@ -10,7 +10,7 @@
       </h1>
       <h2 class="subtitle">
     <strong>  {{$emp->nom}},{{$emp->prénom}}</strong> <br>
-      Le : <strong>{{$visite->created_at}} </strong> <br>
+      Le : <strong>{{$visite->created_at->format('Y M d')}} </strong> <br>
       Par : <strong> {{$user->name}} </strong>
       </h2>
     </div>
