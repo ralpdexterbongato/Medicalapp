@@ -21,7 +21,7 @@ class CreateEmployesTable extends Migration
             $table->date('dateN');
             $table->string('lieuN', 255);
             $table->string('adresse', 255);
-            $table->string('photo');
+            $table->string('photo')->nullable();
             $table->string('RH');
             $table->string('NSS', 10);
             $table->string('qualifPro', 255);
