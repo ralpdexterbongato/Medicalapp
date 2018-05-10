@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class employe_ant extends Model
 {
+	protected $primaryKey="id_ante";
   public function employe() {
     return $this->belogstoMany(employe::class);
   }
