@@ -196,7 +196,7 @@ class EmployeController extends Controller
       $female = employe::where('sexe', 1)->get()->count();
       $visite = visite::all()->count();
       $one = visite::where('typeVisite', 'Visite Dambauche')->count();
-      $two = visite::where('typeVIsite', 'Visite Periodique')->count();
+      $two = visite::where('typeVisite', 'Visite Periodique')->count();
 
       return view('dm.stats',compact('emp','male','female','visite','one','two'));
 
