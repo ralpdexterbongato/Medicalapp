@@ -39,7 +39,6 @@ class OrientationsController extends Controller
     public function store(Request $request)
     {
         $data = new orientations;
-        $data->id_ori = $request->id_ori;
         $data->spécialité = $request->spécialité;
         $data->serviceSocial = $request->serviceSocial;
         $data->serviceEmploi = $request->serviceEmploi;
