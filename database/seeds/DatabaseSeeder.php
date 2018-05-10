@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
     {
         // $this->call(UsersTableSeeder::class);
 
-        $forDefaults = array(array('id_sn' =>'0' ,'libelle'=>'Accompli'),array('id' =>'1' ,'libelle'=>'Dispensè'),array('id' =>'1' ,'libelle'=>'inapte'));
+        $forDefaults = array(array('id_sn' =>'0' ,'libelle'=>'Accompli'),array('id' =>'1' ,'libelle'=>'Dispensè'),array('id' =>'2' ,'libelle'=>'inapte'));
     	 situationNational::insert($forDefaults);
     	
     }
