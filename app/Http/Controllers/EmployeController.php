@@ -52,7 +52,7 @@ class EmployeController extends Controller
                'dateN' => 'required',
                'lieuN' => 'required',
                'adresse' => 'required',
-               'photo' => 'required',
+               // 'photo' => 'required',
                'id_sn' => 'required',
                'id_sf' => 'required',
                'id_gr' => 'required',
