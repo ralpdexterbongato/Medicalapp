@@ -15,27 +15,27 @@ class CreateVisitesTable extends Migration
     {
         Schema::create('visites', function (Blueprint $table) {
             $table->increments('id_v')->unsigned()->unique();
-            $table->date('dateVisite');
-            $table->string('typeVisite');
-            $table->integer('poids');
-            $table->integer('taille');
-            $table->integer('albumine');
-            $table->integer('sucre');
-            $table->integer('hématies');
-            $table->integer('ph');
-            $table->string('corpsCétoniques');
-            $table->integer('oeilDroit');
-            $table->integer('oeilGauche');
-            $table->integer('dePrés');
-            $table->integer('deLoin');
-            $table->integer('coleurs');
-            $table->integer('droitCOrrection');
-            $table->integer('gaucheCorrection');
-            $table->integer('oreillleDroit');
-            $table->integer('oreillleGauche');
+            $table->date('dateVisite')->nullable();
+            $table->string('typeVisite')->nullable();
+            $table->integer('poids')->nullable();
+            $table->integer('taille')->nullable();
+            $table->integer('albumine')->nullable();
+            $table->integer('sucre')->nullable();
+            $table->integer('hématies')->nullable();
+            $table->integer('ph')->nullable();
+            $table->string('corpsCétoniques')->nullable();
+            $table->integer('oeilDroit')->nullable();
+            $table->integer('oeilGauche')->nullable();
+            $table->integer('dePrés')->nullable();
+            $table->integer('deLoin')->nullable();
+            $table->integer('coleurs')->nullable();
+            $table->integer('droitCOrrection')->nullable();
+            $table->integer('gaucheCorrection')->nullable();
+            $table->integer('oreillleDroit')->nullable();
+            $table->integer('oreillleGauche')->nullable();
             $table->timestamps();
-            $table->unsignedInteger('nEmployé');
-            $table->unsignedInteger('id_med');
+            $table->unsignedInteger('nEmployé')->nullable();;
+            $table->unsignedInteger('id_med')->nullable();;
 
             $table->foreign('nEmployé')->references('nEmployé')->on('employes')->onDelete('cascade');
             $table->foreign('id_med')->references('id')->on('users')->onDelete('cascade');
